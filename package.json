@@ -6,16 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.17",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.2",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.3.0",
+    "next-themes": "^0.2.1",
+    "nprogress": "^0.2.0",
     "postcss": "8.4.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "react-locomotive-scroll": "^0.2.2",
+    "styled-components": "^5.3.9",
     "tailwindcss": "3.3.1"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^9.6.5",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8"
   }
 }
