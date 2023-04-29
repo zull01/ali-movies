@@ -31,9 +31,11 @@ export default function Index({ data }) {
         
         <meta
           name="description"
-          content="Ali's Movies App | Download Premium Quality Movies for Free"
-        />
+          content="Ali's Movies App | Download Premium Quality Movies for Free"/>
         <meta name="keywords" content="Ali's Movies, Movies Downloading" />
+        <meta property="og:title" content="Ali&apos;s Movies" />
+        <meta property="og:description" content="Ali's Movies App | Download Premium Quality Movies for Free"/>
+        <meta property="og:image" content={`https://t.ly/MpJT`}/>
       </Head>
       <div className=" mx-auto mt-10 flex max-w-7xl flex-wrap items-start justify-center gap-10 md:gap-5">
         {data.results.map((data) => (
