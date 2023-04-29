@@ -64,8 +64,10 @@ export default function App({ Component, pageProps }) {
       >
         <div data-scroll-container>
           <div data-scroll-section>
-            <Header />
-            <Component {...pageProps} />
+            <div data-scroll data-scroll-position='top' data-scroll-direction="vertical">
+              <Header />
+              <Component {...pageProps} />
+            </div>
           </div>
         </div>
       </ScrollProviderWithRouter>
