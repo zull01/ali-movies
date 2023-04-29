@@ -58,6 +58,7 @@ export default function App({ Component, pageProps }) {
             direction: "horizontal",
             breakpoint: 640,
           },
+          passive: false, // allow scroll events to be prevented
         }}
         watch={[
           "scroll-instance",
