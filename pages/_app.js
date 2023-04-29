@@ -48,25 +48,19 @@ export default function App({ Component, pageProps }) {
           class: "",
           offset: 0,
           reloadOnZoom: false,
-          // tablet: {
-          //   smooth: true,
-          //   direction: "horizontal",
-          //   breakpoint: 1024,
-          // },
-          // smartphone: {
-          //   smooth: true,
-          //   direction: "horizontal",
-          //   breakpoint: 640,
-          // },
+          tablet: {
+            smooth: true,
+            direction: "horizontal",
+            breakpoint: 1024,
+          },
+          smartphone: {
+            smooth: true,
+            direction: "horizontal",
+            breakpoint: 640,
+          },
           passive: false, // allow scroll events to be prevented
         }}
-        watch={[
-          "scroll-instance",
-          typeof window !== "undefined" ? window.location.pathname : null,
-          typeof window !== "undefined" ? window.location.search : null,
-          router.asPath,
-          router.query,
-        ]}
+        watch={[]}
       >
         <div data-scroll-container>
           <div data-scroll-section>
