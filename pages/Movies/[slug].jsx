@@ -52,9 +52,12 @@ function Slug({ data, shortUrl }) {
   return (
     <>
       <Head>
-        <title>{slug}</title>
-        <meta name="description" content={slug} />
-        <meta name="keywords" content={slug} />
+        <title>Ali&apos;s Movies | {data.original_title.slice(0, 57)}</title>
+        <meta name="description" content={data.overview.slice(0, 155)} />
+        <meta name="keywords" content={data.overview} />
+        <meta property="og:title" content={data.original_title} />
+        <meta property="og:description" content={data.overview}/>
+        <meta property="og:image" content={`https://image.tmdb.org/t/p/w500${data.poster_path}`}/>
       </Head>
       <div data-scroll-section key={data.id}>
         <button

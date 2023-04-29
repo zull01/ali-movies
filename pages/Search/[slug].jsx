@@ -58,7 +58,12 @@ function Slug({ data, shortUrl, shortUrl1, shortUrl2 }) {
   return (
     <>
       <Head>
-        <title>{slug}</title>
+        <title>Ali&apos;s Movies | {data.original_title.slice(0, 57)}</title>
+        <meta name="description" content={data.overview.slice(0, 155)} />
+        <meta name="keywords" content={data.overview} />
+        <meta property="og:title" content={data.original_title} />
+        <meta property="og:description" content={data.overview}/>
+        <meta property="og:image" content={`https://image.tmdb.org/t/p/w500${data.poster_path}`}/>
       </Head>
       <div key={data.id}>
         <button

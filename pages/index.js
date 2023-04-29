@@ -11,19 +11,12 @@ export async function getServerSideProps(context) {
   const apiUrl = "https://api.themoviedb.org/3/trending/all/day";
   const apiKey = `${process.env.API_KEY}`;
 
-  try {
     const res = await fetch(`${apiUrl}?api_key=${apiKey}`);
     const data = await res.json();
 
     return {
       props: { data },
     };
-  } catch (error) {
-    console.error(error);
-    return {
-      props: { data: {} },
-    };
-  }
 }
 
 export default function Index({ data }) {
@@ -34,7 +27,8 @@ export default function Index({ data }) {
   return (
     <>
       <Head>
-        <title>Ali&apos;s Movies App</title>
+        <title>Ali&apos;s Movies</title>
+        
         <meta
           name="description"
           content="Ali's Movies App | Download Premium Quality Movies for Free"
