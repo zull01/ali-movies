@@ -24,10 +24,10 @@ export async function getServerSideProps(context) {
     props: {
       data,
       shortUrl,
-      context,
     },
   };
 }
+
 
 function formatBudget(budget) {
   if (budget >= 1000000000) {
