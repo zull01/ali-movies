@@ -6,6 +6,7 @@ import Router, { useRouter, withRouter } from "next/router";
 import NProgress from "nprogress"; // import the library
 import "nprogress/nprogress.css"; // import the CSS
 import { Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,6 +67,7 @@ export default function App({ Component, pageProps }) {
           <div data-scroll-section>
               <Header />
               <Component {...pageProps} />
+              <Analytics/>
           </div>
         </div>
       </ScrollProviderWithRouter>
